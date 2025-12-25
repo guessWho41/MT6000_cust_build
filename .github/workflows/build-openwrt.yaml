@@ -119,10 +119,10 @@ jobs:
           - **Bridger**
           - **DDNS**
           - **DNS Crypt Proxy**
-          - **MWAN**
+          - **MWAN3**
           - **OpenSSH and SFTP eith hardened config**
           - **SQM**
-          - **TCP BBR*
+          - **TCP BBR**
           - **UPnP**
           - **Wireguard VPN**
           - **ZRAM**
