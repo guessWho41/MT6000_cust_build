@@ -120,7 +120,7 @@ jobs:
           - **DDNS**
           - **DNS Crypt Proxy**
           - **MWAN**
-          - **OpenSSH and SFTP**
+          - **OpenSSH and SFTP eith hardened config**
           - **SQM**
           - **TCP BBR*
           - **UPnP**
