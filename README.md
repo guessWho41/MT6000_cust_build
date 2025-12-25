@@ -1,3 +1,18 @@
 GL.iNET - MT 6000 custom build with LuCi.
 
-here to see main differences from openwrt vanilla release: https://forum.openwrt.org/t/mt6000-custom-build-with-luci-and-some-optimization-kernel-6-6-x/185241
+Fork of pesa1234's GL.iNET - MT 6000 custom build with customizations:
+
+- Mbed TLS relaced with OpenSSL
+- WiFi UCODE scripts
+- Ad Block Fast
+- Bridger
+- DDNS
+- DNS Crypt Proxy
+- MWAN
+- OpenSSH and SFTP with hardened config from cjom
+- SQM
+- TCP BBR
+- UPnP
+- Wireguard
+- ZRAM
+- REMOVED dropbear, odhcpd and ppp
