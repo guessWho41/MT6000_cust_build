@@ -14,7 +14,7 @@ on:
 
 env:
   REMOTE_REPOSITORY: pesa1234/openwrt
-  CONFIG_FILE: mt6000.config
+  CONFIG_FILE: .config
   GH_TOKEN: ${{ github.token }}
 
 jobs:
