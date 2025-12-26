@@ -90,6 +90,8 @@ jobs:
             sleep 30
             make -j1 V=s
           }
+          mkdir -p packages
+          find ./bin/ -type f \( -iname '*.ipk' \) -exec cp -v {} ./packages/ \;
           mkdir -p firmware
           find ./bin -type f \( -iname 'openwrt-*-sysupgrade.bin' -or -iname 'config.buildinfo' \) -exec mv -v {} ./firmware/ \; ||:
           mv .config firmware/full.config ||:
@@ -99,7 +101,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: gl-mt6000-firmware
-          path: firmware/*
+          path: |
+            firmware/*
+            packages/*
 
       - name: Create release
         run: |
@@ -126,7 +130,7 @@ jobs:
           - **UPnP**
           - **Wireguard VPN**
           - **ZRAM**
-          - **REMOVED:** dropbear, odhcpd and ppp" --title "OpenWrt Custom Release for Flint 2 (${{ needs.check_commits.outputs.release_prefix }}-${RELEASE_DATE})" firmware/*
+          - **REMOVED:** dropbear, odhcpd and ppp" --title "OpenWrt Custom Release for Flint 2 (${{ needs.check_commits.outputs.release_prefix }}-${RELEASE_DATE})" firmware/* packages/*
 
       - name: Clean up old releases
         run: |
