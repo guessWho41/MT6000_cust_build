@@ -15,4 +15,4 @@ Fork of pesa1234's GL.iNET - MT 6000 custom build with customizations:
 - UPnP
 - Wireguard
 - ZRAM
-- REMOVED dropbear, odhcpd and ppp
+- REMOVED: dropbear, odhcpd and ppp
