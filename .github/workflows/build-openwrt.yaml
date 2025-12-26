@@ -91,9 +91,9 @@ jobs:
             make -j1 V=s
           }
           mkdir -p packages
-          find ./bin/ -type f \( -iname '*.ipk' \) -exec cp -v {} ./packages/ \;
+          find ./bin -type f \( -iname '*.apk' \) -exec cp -v {} ./packages/ \;
           mkdir -p firmware
-          find ./bin -type f \( -iname 'openwrt-*-sysupgrade.bin' -or -iname 'config.buildinfo' \) -exec mv -v {} ./firmware/ \; ||:
+          find ./bin-type f \( -iname 'openwrt-*-sysupgrade.bin' -or -iname 'config.buildinfo' \) -exec mv -v {} ./firmware/ \; ||:
           mv .config firmware/full.config ||:
           cd firmware && find -iname 'openwrt-*-sysupgrade.bin' -exec sh -c "sha256sum {} >sha256sums" \; ||:
 
